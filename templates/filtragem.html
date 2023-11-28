@@ -7,14 +7,202 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js">
     <link rel="stylesheet" href="../static/base.css">
     <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+
+        header {
+            background-color: #133C63;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            display: center;
+            align-items: left;
+            justify-content: space-between;
+        }
+
+        .botao-sobre {
+            display: left;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2em;
+
+        }
+
+        .info-box,
+        .curiosidade-box,
+        .chart-box {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 1em;
+            margin: 1em;
+            width: 550px;
+            text-align: center;
+
+        }
+
+        .info-box img,
+        .info-box2 img {
+            object-fit: cover;
+            width: 60%;
+            height: 60%;
+            border-radius: 8px;
+
+        }
+
+
+        canvas{
+            color: white;
+        }
+    
+        .info-box{
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart1{
+            max-width: 200px;
+            max-height: 200px;
+            width: 60%;
+            height: 60%;
+
+        }
+
     </style>
 </head>
 <body>
     <header class="titulo-filtragem">
-        <h1>Filtragem</h1>
+        <h1>FILTRAGEM</h1>
+        <a href="sobre-filtragem.html" class="botao-sobre">Sobre Filtragem</a>
+
     </header>
 
+    <div class="container">
+         <!-- <div class="chart-box">
+            <h2>ÍNDICES DE FILTRAGEM 1</h2>
+            <canvas id="chart4"></canvas>
+        </div>  -->
+
+        <div class="chart-box">
+            <h2> ÍNDICES DE FILTRAGEM 1</h2>
+            <canvas id="chart2"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <div class="info-box2">
+                <h2>ÍNDICES DE FILTRAGEM 2</h2>
+                <canvas id="chart3"></canvas>
+
+            </div>
+        </div>
+
+        <div class="chart-box">
+            <h2>ÍNDICES DE FILTRAGEM 3</h2>
+            <canvas id="chart1"></canvas>
+        </div>
 
 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx1 = document.getElementById('chart1').getContext('2d');
+        var chart1 = new Chart(ctx1, {
+            type: 'pie',
+            data: {
+                labels: ['Íons metálicos', 'Arsênio', 'Estanho', 'Selênio', 'Antimônio'],
+                datasets: [{
+                    data: [20, 20, 20, 20, 20],
+                    backgroundColor: ['#B22222', '#36A2EB', '#FFCE56', '#228B22', '#FF8C00']
+                }]
+            }
+        });
+
+        var ctx2 = document.getElementById('chart2').getContext('2d');
+        var chart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Maio'],
+                datasets: [{
+                    label: 'Remoção de Íons Metálicos',
+                    backgroundColor: '#133C63',
+                    borderColor: '##133C63',
+                    data: [30, 10, 20, 50, 40]
+                }]
+            }
+        });
+
+        var ctx3 = document.getElementById('chart3').getContext('2d');
+        var chart3 = new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex'],
+                datasets: [{
+                    label: 'Níveis de Óxidos de Cobalto, Níquel, Manganês e Chumbo',
+                    backgroundColor: '#133C63',
+                    borderColor: '#36A2EB',
+                    data: [5, 15, 10, 15, 5],
+                    fill: false
+                }]
+            }
+        });
+        var ctx4 = document.getElementById('chart4').getContext('2d');
+        var DATA_COUNT = 7;
+        var NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 100};
+
+        var labels = Utils.months({count: 7});
+        var data = {
+        labels: labels,
+        datasets: [
+            {
+            label: 'Dataset 1',
+            data: [10, 30, 50, 20, 25, 44, -10],
+            borderColor: Utils.CHART_COLORS.red,
+            backgroundColor: Utils.CHART_COLORS.red,
+            },
+            {
+            label: 'Dataset 2',
+            data: [100, 33, 22, 19, 11, 49, 30],
+            borderColor: Utils.CHART_COLORS.blue,
+            backgroundColor: Utils.CHART_COLORS.blue,
+            }
+        ]
+        };var DATA_COUNT = 7;
+        var NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 100};
+
+        var labels = Utils.months({count: 7});
+        var data = {
+        labels: labels,
+        datasets: [
+            {
+            label: 'Dataset 1',
+            data: [10, 30, 50, 20, 25, 44, -10],
+            borderColor: Utils.CHART_COLORS.red,
+            backgroundColor: Utils.CHART_COLORS.red,
+            },
+            {
+            label: 'Dataset 2',
+            data: [100, 33, 22, 19, 11, 49, 30],
+            borderColor: Utils.CHART_COLORS.blue,
+            backgroundColor: Utils.CHART_COLORS.blue,
+            }
+        ]
+        };
+    </script>
 </body>
 </html>

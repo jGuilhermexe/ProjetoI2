@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtragem</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js">
+    <link rel="stylesheet" href="../static/base.css">
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #133C63;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    display: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botao-sobre {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em;
+}
+
+.info-box,
+.curiosidade-box,
+.chart-box {
+    width: 600px;
+    background-color: #3498db; 
+    color: white;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 8px;
+    text-align: center;
+    height: 400px;
+    overflow: hidden;
+}
+
+.info-box img {
+    object-fit: contain;
+    width: 70%;
+    height: 70%; 
+    border-radius: 8px;
+}
+
+.curiosidade-box img {
+    object-fit: contain;
+    width: 100%;
+    height: 60%; 
+    border-radius: 2px;
+}
+
+.chart-box img {
+    object-fit: contain;
+    width: 40%;
+    height: 10%; 
+    border-radius: px;
+}
+
+    </style>
+</head>
+<body>
+    <header class="titulo-filtragem">
+        <a href="filtragem.html" class="botao-sobre">Graficos e Estatísticas</a>
+        <h1>FILTRAGEM</h1>
+    </header>
+
+    <div class="options-box"></div>
+    <div class="container">
+        <div class="info-box">
+            <h2>O QUE É A FILTRAGEM?</h2>
+            <p>A filtragem em um sistema de Estação de Tratamento de Efluentes (ETE) desempenha um papel crucial na remoção de impurezas e partículas indesejadas presentes nos efluentes antes de sua liberação no meio ambiente. Essa etapa é essencial para garantir que a água tratada atenda aos padrões ambientais e regulatórios.</p>
+            <img src="../static/Science-bro.png" alt="Science-bro">
+        </div>
+
+        <div class="curiosidade-box">
+            <h2>FILTRAÇÃO NA ETE</h2>
+            A filtração desempenha um papel crucial em sistemas de Estação de Tratamento de Efluentes (ETE). Em conjunto, os métodos de filtração contribuem significativamente
+             para garantir a qualidade da água tratada, protegendo o meio ambiente e cumprindo padrões regulatórios rigorosos.
+             <img src="../static/estasaorr.PNG" alt="estasaorr">
+        </div>
+
+        <div class="options-box">
+            <div class="curiosidade-box">
+                <h2>FILTRO DE CARVÃO</h2>
+                Para remoção dos possíveis íons metálicos de cromo, arsênio, estanho, selênio e antimônio presentes na água residual pode ser utilizado processo de adsorção por meio de um filtro de carvão ativado.
+                <img src="../static/filtroefluente.png" alt="filtroefluente">
+            </div>
+        </div>
+        <div class="options-box">
+        <div class="curiosidade-box">
+
+                <h2>FILTRO DE RESINA</h2>
+                Para remoção dos possíveis íons metálicos de chumbo, cádmio, mercúrio, cobre e
+                zinco, para a realização da desmineralização da água residual, com a remoção de
+                íons de cálcio, magnésio, sódio e potássio, e a remoção seletiva de íons de nitratos,
+                sulfatos, fosfatos, amônia, entre outros, pode ser utilizado filtros de resinas de troca
+                iônica. 
+                <img src="../static/filtros-02.PNG" alt="filtro">
+            </div>
+        </div>
+
+        <div class="curiosidade-box">
+            <h2>IMPORTÂNCIA DOS FILTROS</h2>
+            O filtro de carvão ativado e os filtros de resinas de troca iônica também ajudam na remoção de dióxido de chumbo, óxido de cobalto,
+             óxido de níquel e óxido de manganês que podem estar presentes na água.
+             <img src="../static/Formula-amico.png" alt="cienssiar">
+        </div>
+    </div>
+</body>
+</html>

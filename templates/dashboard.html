@@ -16,38 +16,34 @@
 
     <div class="container">
         <div class="card">
-            <h2>Coleta de óleo</h2>
-            <img src="../static/undraw_React_re_g3ui.png" width="100%">
-            <!--<canvas id="chart1"></canvas>-->
+            <h2>Poluição</h2>
+            <canvas id="chart1"></canvas>
         </div>
 
         <div class="card">
-            <h2>Sedmentação</h2>
-            <img src="../static/undraw_React_re_g3ui.png" width="100%">
-            <!--<canvas id="chart2"></canvas>-->
+            <h2>Crescimento</h2>
+            <canvas id="chart2"></canvas>
         </div>
 
         <div class="card">
-            <h2>Gradeamento e peneiração</h2>
-            <img src="../static/undraw_React_re_g3ui.png" width="100%">
-            <!--<canvas id="chart3"></canvas>-->
+            <h2>Periodicidade</h2>
+            <canvas id="chart3"></canvas>
         </div>
     </div>
 
     <div class="container">
         <div class="card">
             <h2>Filtragem</h2>
-            <canvas id="chart4"></canvas>
-            <!--<img src="../static/undraw_React_re_g3ui.png" width="100%">-->
+            <img src="../static/undraw_Filter_re_sa16.png" width="100%">
         </div>
 
-        <div class="card" onclick="redirectPage('aeradores.html')">
-            <h2>Aeradores</h2>
+        <div class="card">
+            <h2>Efluente siclano</h2>
             <img src="../static/undraw_React_re_g3ui.png" width="100%">
         </div>
 
         <div class="card">
-            <h2>Armazenamento de água para reuso</h2>
+            <h2>Efluente de tal</h2>
             <img src="../static/undraw_React_re_g3ui.png" width="100%">
         </div>
     </div>
@@ -56,9 +52,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        function redirectPage(url) {
-            window.location.href = url;
-        }
         var ctx1 = document.getElementById('chart1').getContext('2d');
         var chart1 = new Chart(ctx1, {
             type: 'pie',
@@ -66,8 +59,7 @@
                 labels: ['A', 'B', 'C'],
                 datasets: [{
                     data: [30, 40, 30],
-                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-                    color:'#FFFFFF'
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
                 }]
             }
         });
@@ -96,40 +88,10 @@
                     backgroundColor: '#36A2EB',
                     borderColor: '#36A2EB',
                     data: [5, 10, 15, 10, 5],
-                    color:'#FFFFFF',
                     fill: false
                 }]
             }
         });
-
-        window.onload = function (){
-        var ctx4 = document.getElementById('chart4').getContext('2d');
-        var chart4 = new Chart(ctx4, {
-            type: 'line',
-            data: {
-                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
-                datasets: [{
-                    label: 'Gráfico',
-                    stepped: 'before', 
-                    data: [0, 10, 5, 2, 20, 30, 45],
-                    borderColor: 'blue',
-                    backgroundColor: 'blue',
-                }]
-            },
-            options: {
-                scales: {
-                    x: {
-                        type: 'linear',
-                        position: 'bottom'
-                    },
-                    y: {
-                        type: 'linear',
-                        position: 'left'
-                    }
-                }
-            }
-        });
-        };
     </script>
 </body>
 </html>
