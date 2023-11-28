@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeradores</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js">
+    <link rel="stylesheet" href="../static/base.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 200vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+
+        header {
+            background-color: #133C63;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .botao-sobre {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2em;
+        }
+
+        .info-box,
+        .curiosidade-box,
+        .chart-box {
+            width: 600px;
+            background-color: #3498db; 
+            color: white;
+            padding: 1em;
+            margin: 1em;
+            border-radius: 8px;
+            text-align: center;
+            height: 400px; 
+        }
+
+        .info-box img,
+        .info-box2 img {
+            object-fit: cover;
+            width: 60%;
+            height: 60%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header class="titulo-aeradores">
+        <a href="sobre-aeradores.html" class="botao-sobre">Mais sobre Aeradores</a>
+        <h1>AERADORES</h1>
+    </header>
+
+    <div class="options-box"></div>
+    <div class="container">
+        <div class="info-box">
+            <h2>GRÁFICO1</h2>
+
+        </div>
+
+        <div class="curiosidade-box">
+            <h2>GRÁFICO2</h2>
+        </div>
+
+        <div class="chart-box">
+            <div class="info-box2">
+                <h2>GRÁFICO3</h2>
+
+
+            </div>
+        </div>
+
+        <div class="chart-box">
+            <h2>GRÁFICO4</h2>
+
+        </div>
+
+
+    </div>
+</body>
+</html>

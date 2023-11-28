@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cadastrostyle.css') }}">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>CADASTRO <br> Realize seu cadastro e junte-se a nós! </h1>
+            <img src="{{ url_for('static', filename='Sign up-rafiki.svg') }}" class="left-image" alt="Tratamento de Efluentes">
+        </div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <div class="right-login">
+            <div class="card-login">
+                <h1>CADASTRO</h1>
+                <form action="{{ url_for('pagina_cadastro') }}" method="post">
+                    <div class="textfield">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" name="nome" id="nome" placeholder="Insira seu nome completo" required>
+                    </div>
+                    <div class="textfield">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Insira seu E-mail" required>
+                    </div>
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="senha" id="senha" placeholder="Insira sua senha" required>
+                    </div>
+                    <button type="submit" class="btn-register">Cadastrar</button>
+                </form>
+                <p>Já possui uma conta? <a href="{{ url_for('index') }}">Faça login</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
