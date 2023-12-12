@@ -9,3 +9,9 @@ CREATE TABLE IF NOT EXISTS usuarios (
     senha VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+GRANT ALL PRIVILEGES ON tratamento_db.* TO 'Samuel'@'localhost';
+FLUSH PRIVILEGES;
+
+GRANT ALL PRIVILEGES ON tratamento_db.* TO 'root'@'localhost';
+FLUSH PRIVILEGES;

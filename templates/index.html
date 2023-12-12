@@ -13,13 +13,22 @@
             <h1>FAÇA LOGIN <br> ESTAÇÃO DE TRATAMENTO DE EFLUENTES </h1>
             <img src="{{ url_for('static', filename='world-water-day-animate.svg') }}" class="left-image" alt="Tratamento de Efluentes">
         </div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
         <div class="right-login">
             <div class="card-login">
                 <h1>LOGIN</h1>
                 <form action="{{ url_for('fazer_login') }}" method="post">
                     <div class="textfield">
                         <label for="email">Email:</label>
-                        <input type="text" id="email" name="email" placeholder="Email" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="textfield">
                         <label for="senha">Senha:</label>
